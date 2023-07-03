@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 450px 450px ;
+    width: 900px;
+    margin: auto;
+    box-shadow: 4px 4px 20px 0px #00000069;
+    border-radius: 25px;
+    margin-top: 100px;
+
+    animation: opening 1s ease 1 ;
+}
+
+
+/* the result card : */
+
+.result {
+    background-image: linear-gradient(
+        hsl(252, 100%, 67%),
+        hsl(241, 81%, 54%)
+    );
+    border-radius: 25px;
+    text-align: center;
+    padding: 13px;
+} 
+
+.result > p:first-child {
+    color: hsl(241, 100%, 89%);
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.resultno {
+    color: white;
+    font-size: 85px;
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    padding: 20px;
+    padding: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(
+        hsla(256, 72%, 46%, 1),
+        hsla(241, 72%, 46%, 0)
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.5s;
+}
+.resultno p:first-child {
+    margin: 0px;
+    font-weight: bold;
+}
+.resultno p:nth-child(2) {
+    font-size: 22px;
+    color: #887bff;
+    margin: 0;
+    font-weight: 600;
+}
+
+.result > p:nth-of-type(2) {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.result > p:nth-of-type(3) {
+    color: #bfbbf3;
+    margin: 0px 40px 40px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+/* ------------------------------- */
+/* the summery card : */
+
+.summary {
+    padding: 13px 40px ;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: white;
+}
+.summary > p {
+    font-size: 27px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.reaction {
+    background-color: #fff6f5 ;
+    color: #b77b7a ;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+}
+.memory {
+    background-color: #fffbf2 ;
+    color: #ffc345 ;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+}
+.verbal {
+    background-color: #f2fbfa ;
+    color: #45aa99 ;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    transition-duration: 0.5s;
+}
+.visual {
+    background-color: #f2f3fd ;
+    color: #333ca5;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: inherit;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    transition-duration: 0.5s;
+}
+
+.summary div div:last-child {
+    color: #575a63;
+    font-weight: bolder;
+    
+}
+.number {
+    color: #b1abaf;
+}
+
+.button {
+    background-color: #303b59;
+    font-size: 24px;
+    display: block;
+    margin: auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    padding: 20px;
+    width: 90%;
+    border-radius: 70px;
+    margin-bottom: 40px;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+.button:hover,
+.reaction:hover,
+.memory:hover,
+.verbal:hover,
+.visual:hover,
+.resultno:hover {
+    transform: scale(1.05);
+}
+button:active {
+    background-image: linear-gradient( hsl(252, 100%, 67%), hsl(241, 81%, 54%) );
+}
+/* ---------------------------------- */
+
+
+@keyframes opening {
+    from {
+        transform: scale(0.5);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+.attribution {
+    position: absolute;
+    bottom: 30%;
+    right: 40%;
+    z-index: -1;
+}
+
+
+@media (max-width: 450px) {
+    body {
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .result {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 50px;
+        border-bottom-left-radius: 50px;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: -55%;
+        right: 18%;
+        z-index: 2;
+    }
+}
